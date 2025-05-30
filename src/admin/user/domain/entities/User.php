@@ -18,11 +18,6 @@ class User
         $this->email = $email;
     }
 
-    // public function getId(): int
-    // {
-    //     return $this->id;
-    // }
-
     public function name(): UserName
     {
         return $this->name;
