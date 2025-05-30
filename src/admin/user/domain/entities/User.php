@@ -1,0 +1,35 @@
+<?php
+
+namespace Src\admin\user\domain\entities;
+
+use Src\admin\user\domain\value_objects\UserEmail;
+use Src\admin\user\domain\value_objects\UserName;
+
+class User
+{
+    private int $id;
+    private UserName $name;
+    private UserEmail $email;
+
+    public function __construct(int $id, UserName $name, UserEmail $email)
+    {
+        $this->id = $id;
+        $this->name = $name;
+        $this->email = $email;
+    }
+
+    // public function getId(): int
+    // {
+    //     return $this->id;
+    // }
+
+    public function name(): UserName
+    {
+        return $this->name;
+    }
+
+    public function email(): UserEmail
+    {
+        return $this->email;
+    }
+}
